@@ -16,6 +16,7 @@ function Single() {
               alt="Card image cap"
             />
             <p class="card-text">{item.name}</p>
+            <p class="card-text">{item.price}</p>
           </div>
         </div>
       ))}
