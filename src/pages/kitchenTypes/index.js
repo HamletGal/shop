@@ -4,14 +4,22 @@ import useFetch from "../../components/useFetch";
 function Single() {
   const history = useHistory();
   const params = useParams();
-  const { data = [] } = useFetch("/mock/kitchenTypes.json");
-  const type = data.find((item) => item.id === Number(params.id)) || {};
-
+  const { data = [] } = useFetch(`/mock/menus/${params.id}.json`);
   return (
-    <div className="blockLeft">
-      <h2>{type.title}</h2>
-      <p>{type.description}</p>
-      <button onClick={() => history.push("/")}>go to main</button>
+    <div className="row">
+     {data.map((item) => (
+        <div className="col-md-4 mt-2">
+          <div class="card">
+            <img
+              class="card-img-top"
+              src={item.photoUrl}
+              alt="Card image cap"
+            />
+            <p class="card-text">{item.name}</p>
+          </div>
+        </div>
+      ))}
+      <button className="btn btn-danger" onClick={() => history.push("/")}>go to back</button>
     </div>
   );
 }
