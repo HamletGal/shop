@@ -9,7 +9,7 @@ function Restaurants() {
     <div className="row">
       {data.map((item) => (
         <div className="col-md-4 mt-2">
-          <div class="card">
+          <div class="card" onClick={() => history.push(`/type/${item.id}`)}>
             <img
               class="card-img-top"
               src={item.photoUrl}
