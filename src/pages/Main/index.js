@@ -1,6 +1,6 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
-import useFetch from "../components/useFetch";
+import useFetch from "../../components/useFetch";
 
 function Restaurants() {
   const { data = [] } = useFetch("/mock/restaurants.json");
