@@ -6,6 +6,7 @@ function Input({value,onLocalChange}){
           type="text"
           placeholder="Search"
           value={value}
+          className="form-control"
           onChange={onLocalChange}
         />
     )
