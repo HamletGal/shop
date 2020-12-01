@@ -1,5 +1,7 @@
 import { BrowserRouter } from "react-router-dom";
 import Router from "./routes";
+import { Cart } from './context/Cart';
+import { CartProvider } from './context/CartContext';
 import './App.css';
 
 function App() {
@@ -7,7 +9,10 @@ function App() {
 
   return (
     <BrowserRouter>
-      <Router />
+      <CartProvider>
+        <Cart />
+        <Router />
+      </CartProvider>
     </BrowserRouter>
   );
 }

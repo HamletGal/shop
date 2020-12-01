@@ -1,12 +1,15 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { useHistory, useParams } from "react-router-dom";
 import useFetch from "../../components/useFetch";
+import { CartContext } from './../../context/CartContext';
+
 
 function Single() {
   const history = useHistory();
   const params = useParams();
   const [searchMin, setSearchMin] = useState("");
   const [searchMax, setSearchMax] = useState("");
+  const [cart, setCart] = useContext(CartContext);
   const { data = [] } = useFetch(`/mock/menus/${params.id}.json`);
 
   const handleChangeMin = (e) => {
@@ -22,6 +25,10 @@ function Single() {
     : data.filter((data) =>
         data.price >= Number(searchMin) && data.price <= Number(searchMax)
       );
+
+  const addToCart = (item) => {
+    setCart(currentState => [...currentState, item]);
+  }    
 
   return (
     <>
@@ -48,7 +55,7 @@ function Single() {
     <div className="row">
      {results.map((item) => (
         <div className="col-md-4 mt-2">
-          <div class="card">
+          <div class="card" onClick={() => addToCart(item) }>
             <img
               class="card-img-top"
               src={item.photoUrl}
