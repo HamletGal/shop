@@ -4,12 +4,16 @@ import {CartContext} from './CartContext';
 export const Cart = () => {
   const [cart, setCart] = useContext(CartContext);
   const totalPrice = cart.reduce((acc, curr) => acc + curr.price, 0);
- 
+
+  
+  const handleRemoveItem = id => {
+    setCart(cart.filter(item => item.id !== id ))
+}
   return (
     cart.length > 0 &&
     <> 
         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalCart"><i class="fas fa-shopping-cart fa-1"></i>-{cart.length}</button>
-        <div class="modal fade" id="modalCart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"  aria-hidden="true">
+        <div class="modal" id="modalCart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"  aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
             <div class="modal-header">
@@ -34,7 +38,7 @@ export const Cart = () => {
               <th scope="row">{item.id}</th>
               <td>{item.name}</td>
               <td>{item.price}</td>
-              <td><a><i class="fas fa-times"></i></a></td>
+              <td><span onClick={() =>handleRemoveItem(item.id)}><i class="fas fa-times"></i></span></td>
             </tr>
             )}  
            
