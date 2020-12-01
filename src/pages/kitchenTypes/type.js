@@ -32,7 +32,9 @@ function Type() {
           </div>
         </div>
       ))}
-      <button className="btn btn-danger" onClick={() => history.push("/")}>go to back</button>
+      <div className="col-md-12">
+        <button className="btn btn-danger" onClick={() => history.push("/")}>go to back</button>
+      </div>
     </div>
   );
 }
