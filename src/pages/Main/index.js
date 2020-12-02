@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 import useFetch from "../../components/useFetch";
 import Input from "../../components/Input";
+import Image from "../../components/Image";
 import Drop from "./drop";
 
 function Restaurants() {
@@ -36,10 +37,7 @@ function Restaurants() {
               className="card"
               onClick={() => history.push(`/type/${item.id}`)}
             >
-              <img
-                className="card-img-top"
-                src={item.photoUrl}
-              />
+              <Image src={item.photoUrl} className="card-img-top" alt="Image" />
               <p className="card-text">{item.name}</p>
             </div>
           </div>

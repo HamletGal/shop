@@ -1,6 +1,7 @@
 import React from "react";
 import { useHistory, useParams } from "react-router-dom";
 import useFetch from "../../components/useFetch";
+import Image from "../../components/Image";
 
 function Type() {
   const history = useHistory();
@@ -22,11 +23,7 @@ function Type() {
             className="card"
             onClick={() => history.push(`/type/${item.id}`)}
           >
-            <img
-              className="card-img-top"
-              src={item.photoUrl}
-              alt="Card image cap"
-            />
+            <Image src={item.photoUrl}  className="card-img-top" alt="Card image cap" />
             <p className="card-text">{item.name}</p>
             <p className="card-text">{item.price}</p>
           </div>

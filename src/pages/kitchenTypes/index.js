@@ -3,7 +3,7 @@ import { useHistory, useParams } from "react-router-dom";
 import useFetch from "../../components/useFetch";
 import { CartContext } from './../../context/CartContext';
 import Input from "../../components/Input";
-
+import Image from "../../components/Image";
 
 function Single() {
   const history = useHistory();
@@ -45,7 +45,7 @@ function Single() {
      {results.map((item) => (
         <div className="col-md-4 mt-2" key={item.id}>
           <div className="card" onClick={() => addToCart(item) } >
-            <img className="card-img-top" src={item.photoUrl} alt="Card image cap" />
+            <Image src={item.photoUrl} className="card-img-top" alt="Card image cap" />
             <p className="card-text">{item.name}</p>
             <p className="card-text">{item.price}</p>
           </div>
