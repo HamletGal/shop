@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "name": "a 1",
+    "name": "Restaurant 1",
     "photoUrl": "https://media.gettyimages.com/photos/cozy-restaurant-for-gathering-with-friends-picture-id1159992039?s=612x612",
     "kitchenTypes": ["arm", "rus", "eng"]
   },{
