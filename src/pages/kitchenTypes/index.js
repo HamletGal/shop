@@ -27,7 +27,7 @@ function Single() {
       );
 
   const addToCart = (item) => {
-    setCart(currentState => [...currentState, item]);
+    setCart(currentState => [...currentState,{ id:Date.now(), name:item.name, price:item.price }]);
   }    
 
   return (
@@ -54,15 +54,15 @@ function Single() {
     </div>
     <div className="row">
      {results.map((item) => (
-        <div className="col-md-4 mt-2">
-          <div class="card" onClick={() => addToCart(item) }>
+        <div className="col-md-4 mt-2" key={item.id}>
+          <div className="card" onClick={() => addToCart(item) } >
             <img
-              class="card-img-top"
+              className="card-img-top"
               src={item.photoUrl}
               alt="Card image cap"
             />
-            <p class="card-text">{item.name}</p>
-            <p class="card-text">{item.price}</p>
+            <p className="card-text">{item.name}</p>
+            <p className="card-text">{item.price}</p>
           </div>
         </div>
       ))}

@@ -12,18 +12,18 @@ export const Cart = () => {
   return (
     cart.length > 0 &&
     <> 
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalCart"><i class="fas fa-shopping-cart fa-1"></i>-{cart.length}</button>
-        <div class="modal" id="modalCart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"  aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-            <div class="modal-header">
-        <h4 class="modal-title" id="myModalLabel">Your cart</h4>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <button type="button" className="btn btn-primary" data-toggle="modal" data-target="#modalCart"><i className="fas fa-shopping-cart fa-1"></i>-{cart.length}</button>
+        <div className="modal" id="modalCart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"  aria-hidden="true">
+        <div className="modal-dialog" role="document">
+            <div className="modal-content">
+            <div className="modal-header">
+        <h4 className="modal-title" id="myModalLabel">Your cart</h4>
+        <button type="button" className="close" data-dismiss="modal" aria-label="Close">
         <span aria-hidden="true">×</span>
         </button>
         </div>
-      <div class="modal-body">
-        <table class="table table-hover">
+      <div className="modal-body">
+        <table className="table table-hover">
           <thead>
             <tr>
               <th>#</th>
@@ -33,28 +33,28 @@ export const Cart = () => {
             </tr>
           </thead>
           <tbody>
-          {cart.map((item) => 
-            <tr>
+          {cart.map((item,index) => 
+            <tr key={index}>
               <th scope="row">{item.id}</th>
               <td>{item.name}</td>
               <td>{item.price}</td>
-              <td><span onClick={() =>handleRemoveItem(item.id)}><i class="fas fa-times"></i></span></td>
+              <td><span onClick={() =>handleRemoveItem(item.id)}><i className="fas fa-times"></i></span></td>
             </tr>
             )}  
            
           </tbody>
           <tfoot>
               <tr>
-                 <strong>Totatl Price - {totalPrice}</strong>
+                 <td>
+                    <strong> Totatl Price - {totalPrice} </strong>
+                 </td>
               </tr>
           </tfoot>
         </table>
-
       </div>
-  
-      <div class="modal-footer">
-        <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Close</button>
-        <button class="btn btn-primary">Checkout</button>
+      <div className="modal-footer">
+        <button type="button" className="btn btn-outline-primary" data-dismiss="modal">Close</button>
+        <button className="btn btn-primary">Checkout</button>
       </div>
     </div>
   </div>
