@@ -32,7 +32,7 @@ function Single() {
   }    
 
   return (
-    <>
+    <div className="container">
     <div className="row mt-3">
       <div className="col-md-4">
         <Input value={searchMin} placeholder="Min Price" onLocalChange={handleChangeMin} />
@@ -55,7 +55,7 @@ function Single() {
         <button className="btn btn-danger" onClick={() => history.push("/")}>go to back</button>
       </div>
     </div>
-    </>
+    </div>
   );
 }
 
