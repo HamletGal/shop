@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { useHistory } from "react-router-dom";
 import useFetch from "../../components/useFetch";
 
@@ -21,7 +21,7 @@ function Drop() {
       <div className="dropdown-menu">
         {data.map((type, index) => (
           <a
-          className="dropdown-item"
+            className="dropdown-item"
             key={index}
             value={type.name}
             onClick={() => history.push(`/kitchen-type/${type.abbr}`)}

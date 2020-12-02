@@ -2,6 +2,7 @@ import React, { useState, useContext } from "react";
 import { useHistory, useParams } from "react-router-dom";
 import useFetch from "../../components/useFetch";
 import { CartContext } from './../../context/CartContext';
+import Input from "../../components/Input";
 
 
 function Single() {
@@ -9,7 +10,7 @@ function Single() {
   const params = useParams();
   const [searchMin, setSearchMin] = useState("");
   const [searchMax, setSearchMax] = useState("");
-  const [cart, setCart] = useContext(CartContext);
+  const [, setCart] = useContext(CartContext);
   const { data = [] } = useFetch(`/mock/menus/${params.id}.json`);
 
   const handleChangeMin = (e) => {
@@ -34,33 +35,17 @@ function Single() {
     <>
     <div className="row mt-3">
       <div className="col-md-4">
-      <input 
-          type="text"
-          placeholder="Min Price"
-          value={searchMin}
-          className="form-control"
-          onChange={handleChangeMin}
-        />
+        <Input value={searchMin} placeholder="Min Price" onLocalChange={handleChangeMin} />
         </div>
         <div className="col-md-4">
-        <input 
-          type="text"
-          placeholder="Max Price"
-          value={searchMax}
-          className="form-control"
-          onChange={handleChangeMax}
-        />
+        <Input value={searchMax} placeholder="Max Price" onLocalChange={handleChangeMax} />
       </div>
     </div>
     <div className="row">
      {results.map((item) => (
         <div className="col-md-4 mt-2" key={item.id}>
           <div className="card" onClick={() => addToCart(item) } >
-            <img
-              className="card-img-top"
-              src={item.photoUrl}
-              alt="Card image cap"
-            />
+            <img className="card-img-top" src={item.photoUrl} alt="Card image cap" />
             <p className="card-text">{item.name}</p>
             <p className="card-text">{item.price}</p>
           </div>

@@ -23,7 +23,7 @@ function Restaurants() {
     <>
       <div className="row mt-3">
           <div className="col-md-3">
-            <Input value={searchTerm} onLocalChange={handleChange} />
+            <Input value={searchTerm} placeholder="Search" onLocalChange={handleChange} />
           </div>
           <div className="col-md-6">
             <Drop />
@@ -39,7 +39,6 @@ function Restaurants() {
               <img
                 className="card-img-top"
                 src={item.photoUrl}
-                alt="Card image cap"
               />
               <p className="card-text">{item.name}</p>
             </div>
