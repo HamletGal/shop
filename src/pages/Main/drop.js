@@ -20,14 +20,14 @@ function Drop() {
 
       <div className="dropdown-menu">
         {data.map((type, index) => (
-          <a
+          <span
             className="dropdown-item"
             key={index}
             value={type.name}
             onClick={() => history.push(`/kitchen-type/${type.abbr}`)}
           >
             {type.name}
-          </a>
+          </span>
         ))}
       </div>
     </>

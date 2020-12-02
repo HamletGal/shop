@@ -7,27 +7,27 @@
   },{
     "id": 2,
     "name": "Restaurant 2",
-    "photoUrl": "https://media.gettyimages.com/photos/cozy-restaurant-for-gathering-with-friends-picture-id1159992039?s=612x612",
+    "photoUrl": "https://miro.medium.com/max/11192/0*dkW9pVK3_mZ4mEKG",
     "kitchenTypes": ["eng"]
   },{
     "id": 3,
     "name": "Restaurant 3",
-    "photoUrl": "https://media.gettyimages.com/photos/cozy-restaurant-for-gathering-with-friends-picture-id1159992039?s=612x612",
+    "photoUrl": "https://www.elitetraveler.com/wp-content/uploads/2007/02/Alain-Ducasse-768x512.jpg",
     "kitchenTypes": ["rus", "eng"]
   },{
     "id": 4,
     "name": "Restaurant 4",
-    "photoUrl": "https://media.gettyimages.com/photos/cozy-restaurant-for-gathering-with-friends-picture-id1159992039?s=612x612",
+    "photoUrl": "https://www.elitetraveler.com/wp-content/uploads/2007/02/Helen-Derroze-HDCredit-Je%CC%81ro%CC%82me-Galland-768x512.jpg",
     "kitchenTypes": ["arm", "rus"]
   },{
     "id": 5,
     "name": "Restaurant 5",
-    "photoUrl": "https://media.gettyimages.com/photos/cozy-restaurant-for-gathering-with-friends-picture-id1159992039?s=612x612",
+    "photoUrl": "https://www.elitetraveler.com/wp-content/uploads/2007/02/LectureRoomandLibrary_FullRoom_2015_RGB-768x512.jpg",
     "kitchenTypes": ["rus"]
   },{
     "id": 6,
     "name": "Restaurant 6",
-    "photoUrl": "https://media.gettyimages.com/photos/cozy-restaurant-for-gathering-with-friends-picture-id1159992039?s=612x612",
+    "photoUrl": "https://www.elitetraveler.com/wp-content/uploads/2007/02/La-Dame-de-Pic-London-interior-726x484.jpg",
     "kitchenTypes": ["arm", "rus"]
   }
 ]
