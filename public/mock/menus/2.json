@@ -2,32 +2,32 @@
   {
     "id": 1,
     "name": "Dish 1",
-    "photoUrl": "https://media.gettyimages.com/photos/cozy-restaurant-for-gathering-with-friends-picture-id1159992039?s=612x612",
+    "photoUrl": "https://insidescoopsf.sfgate.com/wp-content/blogs.dir/732/files/top-10-dishes-from-the-top-100-restaurants/marlowe.jpg",
     "price": 1000
   },{
     "id": 2,
     "name": "Dish 2",
-    "photoUrl": "https://media.gettyimages.com/photos/cozy-restaurant-for-gathering-with-friends-picture-id1159992039?s=612x612",
+    "photoUrl": "https://insidescoopsf.sfgate.com/wp-content/blogs.dir/732/files/top-10-dishes-from-the-top-100-restaurants/tosca.jpg",
     "price": 2000
   },{
     "id": 3,
     "name": "Dish 3",
-    "photoUrl": "https://media.gettyimages.com/photos/cozy-restaurant-for-gathering-with-friends-picture-id1159992039?s=612x612",
+    "photoUrl": "https://insidescoopsf.sfgate.com/wp-content/blogs.dir/732/files/top-10-dishes-from-the-top-100-restaurants/nido.jpg",
     "price": 1400
   },{
     "id": 4,
     "name": "Dish 4",
-    "photoUrl": "https://media.gettyimages.com/photos/cozy-restaurant-for-gathering-with-friends-picture-id1159992039?s=612x612",
+    "photoUrl": "https://insidescoopsf.sfgate.com/wp-content/blogs.dir/732/files/top-10-dishes-from-the-top-100-restaurants/spqr.jpg",
     "price": 500
   },{
     "id": 5,
     "name": "Dish 5",
-    "photoUrl": "https://media.gettyimages.com/photos/cozy-restaurant-for-gathering-with-friends-picture-id1159992039?s=612x612",
+    "photoUrl": "https://insidescoopsf.sfgate.com/wp-content/blogs.dir/732/files/top-10-dishes-from-the-top-100-restaurants/comal-turkey.jpg",
     "price": 15000
   },{
     "id": 6,
     "name": "Dish 6",
-    "photoUrl": "https://media.gettyimages.com/photos/cozy-restaurant-for-gathering-with-friends-picture-id1159992039?s=612x612",
+    "photoUrl": "https://static.standard.co.uk/s3fs-public/thumbnails/image/2020/07/17/17/st-john-bone-marrow-1707.jpg?width=968",
     "price": 1700
   }
 ]
