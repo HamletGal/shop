@@ -23,33 +23,34 @@ export const Cart = () => {
             type="button"
             className="btn btn-danger"
             data-toggle="modal"
-            data-target="#modalCart"
+            data-target=".bd-example-modal-lg"
           >
             <i className="fas fa-shopping-cart fa-1"></i>-{cart.length}
           </button>
+
           <div
-            className="modal"
-            id="modalCart"
+            class="modal fade bd-example-modal-lg"
             role="dialog"
-            aria-labelledby="exampleModalLabel"
+            aria-labelledby="myLargeModalLabel"
             aria-hidden="true"
+            data-backdrop="false"
           >
-            <div className="modal-dialog" role="document">
-              <div className="modal-content">
-                <div className="modal-header">
-                  <h4 className="modal-title" id="myModalLabel">
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title h4" id="myLargeModalLabel">
                     Your cart
-                  </h4>
+                  </h5>
                   <button
                     type="button"
-                    className="close"
+                    class="close"
                     data-dismiss="modal"
                     aria-label="Close"
                   >
                     <span aria-hidden="true">×</span>
                   </button>
                 </div>
-                <div className="modal-body">
+                <div class="modal-body">
                   <table className="table table-hover">
                     <thead>
                       <tr>
@@ -82,7 +83,7 @@ export const Cart = () => {
                     </tfoot>
                   </table>
                 </div>
-                <div className="modal-footer">
+                <div class="modal-footer">
                   <span className="text-success">{state}</span>
                   <button
                     type="button"
